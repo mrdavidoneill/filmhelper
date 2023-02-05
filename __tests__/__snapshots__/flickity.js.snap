@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel should match the snapshot 1`] = `
+<div>
+  <div
+    class="bg-black cursor-pointer outline-white"
+  >
+    <div
+      class=" flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center"
+      style="background-image: url(image1.jpg);"
+    />
+    <div
+      class=" flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center"
+      style="background-image: url(image2.jpg);"
+    />
+  </div>
+</div>
+`;
