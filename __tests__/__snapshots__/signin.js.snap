@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignIn renders without crashing 1`] = `
+<div>
+  <div
+    class="flex flex-col bg-slate-300 h-[100vh] overflow-hidden"
+  >
+    <button>
+      Dummy login
+    </button>
+  </div>
+</div>
+`;
