@@ -12,7 +12,8 @@
     "husky-install": "husky install",
     "cypress": "cypress open",
     "test": "cypress run",
-    "jest": "jest --watch"
+    "jest": "jest --watch",
+    "jest:coverage": "jest --coverage"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
