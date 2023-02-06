@@ -36,7 +36,7 @@ export interface FilmInfoType {
   BoxOffice: string;
   Production: string;
   Website: string;
-  Response: string;
+  Response: "True" | "False";
 }
 
 export interface FilmSearchType {
@@ -53,3 +53,18 @@ export interface FilmWatchListType {
   imdb_id: string;
   date_added: string;
 }
+
+export interface FilmSearchResponseGoodType {
+  Search: FilmSearchType[];
+  totalResults: string;
+  Response: "True";
+}
+
+export interface FilmSearchResponseBadType {
+  Error: string;
+  Response: "False";
+}
+
+export type FilmSearchResponseType =
+  | FilmSearchResponseGoodType
+  | FilmSearchResponseBadType;
