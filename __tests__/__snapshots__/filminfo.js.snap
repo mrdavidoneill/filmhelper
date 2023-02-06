@@ -1,0 +1,437 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilmInfo matches snapshot 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root h-full self-center w-full max-w-3xl overflow-y-auto css-bhp9pd-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall self-center w-full css-1k23hlb-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
+      >
+        Add to watchlist
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
+      class="MuiCardHeader-root pb-0 css-185gdzj-MuiCardHeader-root"
+    >
+      <div
+        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1qvr50w-MuiTypography-root"
+        >
+          The Matrix
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-body1 MuiCardHeader-subheader css-nrdprl-MuiTypography-root"
+        >
+          Action, Sci-Fi
+        </span>
+      </div>
+      <div
+        class="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
+      >
+        <div
+          class="css-1okj3ks-MuiStack-root"
+        >
+          <span
+            class="MuiRating-root MuiRating-sizeMedium css-iljtu2-MuiRating-root"
+          >
+            <span
+              class="MuiRating-decimal css-34he1w-MuiRating-decimal"
+            >
+              <label
+                class="css-dqr9h-MuiRating-label"
+                for=":r1:"
+                style="width: 0%; overflow: hidden; position: absolute;"
+              >
+                <span
+                  class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+                    data-testid="StarIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiRating-visuallyHidden"
+                >
+                  0.5 Stars
+                </span>
+              </label>
+              <input
+                class="MuiRating-visuallyHidden"
+                id=":r1:"
+                name="half-rating"
+                type="radio"
+                value="0.5"
+              />
+              <label
+                class="css-dqr9h-MuiRating-label"
+                for=":r2:"
+              >
+                <span
+                  class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+                    data-testid="StarIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiRating-visuallyHidden"
+                >
+                  1 Star
+                </span>
+              </label>
+              <input
+                class="MuiRating-visuallyHidden"
+                id=":r2:"
+                name="half-rating"
+                type="radio"
+                value="1"
+              />
+            </span>
+            <span
+              class="MuiRating-decimal css-34he1w-MuiRating-decimal"
+            >
+              <label
+                class="css-dqr9h-MuiRating-label"
+                for=":r3:"
+                style="width: 0%; overflow: hidden; position: absolute;"
+              >
+                <span
+                  class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+                    data-testid="StarIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiRating-visuallyHidden"
+                >
+                  1.5 Stars
+                </span>
+              </label>
+              <input
+                class="MuiRating-visuallyHidden"
+                id=":r3:"
+                name="half-rating"
+                type="radio"
+                value="1.5"
+              />
+              <label
+                class="css-dqr9h-MuiRating-label"
+                for=":r4:"
+              >
+                <span
+                  class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+                    data-testid="StarIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiRating-visuallyHidden"
+                >
+                  2 Stars
+                </span>
+              </label>
+              <input
+                class="MuiRating-visuallyHidden"
+                id=":r4:"
+                name="half-rating"
+                type="radio"
+                value="2"
+              />
+            </span>
+            <span
+              class="MuiRating-decimal css-34he1w-MuiRating-decimal"
+            >
+              <label
+                class="css-dqr9h-MuiRating-label"
+                for=":r5:"
+                style="width: 0%; overflow: hidden; position: absolute;"
+              >
+                <span
+                  class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+                    data-testid="StarIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiRating-visuallyHidden"
+                >
+                  2.5 Stars
+                </span>
+              </label>
+              <input
+                class="MuiRating-visuallyHidden"
+                id=":r5:"
+                name="half-rating"
+                type="radio"
+                value="2.5"
+              />
+              <label
+                class="css-dqr9h-MuiRating-label"
+                for=":r6:"
+              >
+                <span
+                  class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+                    data-testid="StarIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiRating-visuallyHidden"
+                >
+                  3 Stars
+                </span>
+              </label>
+              <input
+                class="MuiRating-visuallyHidden"
+                id=":r6:"
+                name="half-rating"
+                type="radio"
+                value="3"
+              />
+            </span>
+            <span
+              class="MuiRating-decimal css-34he1w-MuiRating-decimal"
+            >
+              <label
+                class="css-dqr9h-MuiRating-label"
+                for=":r7:"
+                style="width: 0%; overflow: hidden; position: absolute;"
+              >
+                <span
+                  class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+                    data-testid="StarIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiRating-visuallyHidden"
+                >
+                  3.5 Stars
+                </span>
+              </label>
+              <input
+                class="MuiRating-visuallyHidden"
+                id=":r7:"
+                name="half-rating"
+                type="radio"
+                value="3.5"
+              />
+              <label
+                class="css-dqr9h-MuiRating-label"
+                for=":r8:"
+              >
+                <span
+                  class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+                    data-testid="StarIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiRating-visuallyHidden"
+                >
+                  4 Stars
+                </span>
+              </label>
+              <input
+                class="MuiRating-visuallyHidden"
+                id=":r8:"
+                name="half-rating"
+                type="radio"
+                value="4"
+              />
+            </span>
+            <span
+              class="MuiRating-decimal css-34he1w-MuiRating-decimal"
+            >
+              <label
+                class="css-dqr9h-MuiRating-label"
+                for=":r9:"
+                style="width: 0%; overflow: hidden; position: absolute;"
+              >
+                <span
+                  class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+                    data-testid="StarIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiRating-visuallyHidden"
+                >
+                  4.5 Stars
+                </span>
+              </label>
+              <input
+                class="MuiRating-visuallyHidden"
+                id=":r9:"
+                name="half-rating"
+                type="radio"
+                value="4.5"
+              />
+              <label
+                class="css-dqr9h-MuiRating-label"
+                for=":ra:"
+              >
+                <span
+                  class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+                    data-testid="StarIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiRating-visuallyHidden"
+                >
+                  5 Stars
+                </span>
+              </label>
+              <input
+                checked=""
+                class="MuiRating-visuallyHidden"
+                id=":ra:"
+                name="half-rating"
+                type="radio"
+                value="5"
+              />
+            </span>
+            <label
+              class="MuiRating-label MuiRating-pristine css-dqr9h-MuiRating-label"
+            >
+              <input
+                class="MuiRating-visuallyHidden"
+                id="half-rating-empty"
+                name="half-rating"
+                type="radio"
+                value=""
+              />
+              <span
+                class="MuiRating-visuallyHidden"
+              >
+                Empty
+              </span>
+            </label>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiCardContent-root pt-0 css-46bh2p-MuiCardContent-root"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+      >
+        2h 16min
+         | 
+        R
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-ejgmvm-MuiTypography-root"
+      >
+        Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+      >
+        A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
+      </p>
+    </div>
+  </div>
+</div>
+`;
