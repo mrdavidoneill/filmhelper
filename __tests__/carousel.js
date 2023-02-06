@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Carousel from "../components/carousel";
+import Carousel from "@/components/carousel";
 
 describe("Carousel", () => {
   it("should match the snapshot", () => {

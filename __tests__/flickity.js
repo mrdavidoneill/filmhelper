@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Carousel from "../components/flickity";
+import Carousel from "@/components/flickity";
 
 describe("Carousel", () => {
   it("should match the snapshot", () => {

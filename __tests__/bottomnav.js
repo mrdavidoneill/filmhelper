@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import BottomNavBar from "../components/bottomnav";
+import BottomNavBar from "@/components/bottomnav";
 
 const mockRouter = {
   pathname: "/discover",
