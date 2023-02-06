@@ -2,7 +2,7 @@ import "@testing-library/jest-dom";
 
 import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
-import SearchAppBar from "../components/searchbar";
+import SearchAppBar from "@/components/searchbar";
 
 describe("SearchAppBar component", () => {
   it("renders correctly", () => {
