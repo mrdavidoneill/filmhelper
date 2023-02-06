@@ -1,3 +1,4 @@
+import { FilmInfoType, FilmSearchResponseType } from "@/shared/types";
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 export async function postAPIRequest({
@@ -46,4 +47,20 @@ export async function getFilmWatchList(token: string) {
     token,
     resource: "filmwatchlist",
   });
+}
+
+export async function searchFilms(
+  input: string
+): Promise<FilmSearchResponseType> {
+  const response = await fetch(
+    `http://www.omdbapi.com/?s=${input}&type=movie&apikey=${process.env.NEXT_PUBLIC_OMDB_KEY}`
+  );
+  return response.json();
+}
+
+export async function getFilmInfo(imdbID: string): Promise<FilmInfoType> {
+  const response = await fetch(
+    `http://www.omdbapi.com/?i=${imdbID}&apikey=${process.env.NEXT_PUBLIC_OMDB_KEY}`
+  );
+  return response.json();
 }
