@@ -15,7 +15,14 @@ export default function BottomNavBar() {
 
   return (
     <Box>
-      <BottomNavigation className="w-full " showLabels value={value}>
+      <BottomNavigation
+        sx={{
+          boxShadow: "0px -2px 10px rgba(0, 0, 0, 0.1)",
+        }}
+        className="w-full"
+        showLabels
+        value={value}
+      >
         <BottomNavigationAction
           href="discover"
           label="Discover"

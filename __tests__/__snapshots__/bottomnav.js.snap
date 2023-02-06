@@ -6,7 +6,7 @@ exports[`BottomNavBar component renders correctly for /discover path 1`] = `
     class="MuiBox-root css-0"
   >
     <div
-      class="MuiBottomNavigation-root w-full  css-16lloyr-MuiBottomNavigation-root"
+      class="MuiBottomNavigation-root w-full css-gumrph-MuiBottomNavigation-root"
     >
       <a
         class="MuiButtonBase-root MuiBottomNavigationAction-root Mui-selected css-1bjk3jo-MuiButtonBase-root-MuiBottomNavigationAction-root"
@@ -94,7 +94,7 @@ exports[`BottomNavBar component renders correctly for /ratings path 1`] = `
     class="MuiBox-root css-0"
   >
     <div
-      class="MuiBottomNavigation-root w-full  css-16lloyr-MuiBottomNavigation-root"
+      class="MuiBottomNavigation-root w-full css-gumrph-MuiBottomNavigation-root"
     >
       <a
         class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bjk3jo-MuiButtonBase-root-MuiBottomNavigationAction-root"
@@ -182,7 +182,7 @@ exports[`BottomNavBar component renders correctly for /watchlist path 1`] = `
     class="MuiBox-root css-0"
   >
     <div
-      class="MuiBottomNavigation-root w-full  css-16lloyr-MuiBottomNavigation-root"
+      class="MuiBottomNavigation-root w-full css-gumrph-MuiBottomNavigation-root"
     >
       <a
         class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bjk3jo-MuiButtonBase-root-MuiBottomNavigationAction-root"
