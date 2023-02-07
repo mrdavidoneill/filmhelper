@@ -40,23 +40,34 @@ export default function Carousel({
     draggable: ">2",
     initialIndex: initialIndex,
   };
-  return (
-    <Flickity
-      flickityRef={(ref: RefProps) => flickityRef(ref, setCurrentIndex)}
-      className={"bg-black cursor-pointer outline-white"} // default ''
-      elementType={"div"} // default 'div'
-      options={flickityOptions}
-      disableImagesLoaded={true} // default false
-      reloadOnUpdate={true} // default false
-      static // default false
-    >
-      {images.map((image) => (
-        <div
-          key={image}
-          className=" flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center"
-          style={{ backgroundImage: `url(${image})` }}
-        ></div>
-      ))}
-    </Flickity>
-  );
+
+  if (images.length > 0) {
+    return (
+      <Flickity
+        flickityRef={(ref: RefProps) => flickityRef(ref, setCurrentIndex)}
+        className={"bg-black cursor-pointer outline-white"} // default ''
+        elementType={"div"} // default 'div'
+        options={flickityOptions}
+        disableImagesLoaded={true} // default false
+        reloadOnUpdate={true} // default false
+        static // default false
+      >
+        {images.map((image, index) => (
+          <div
+            key={`${image}:${index}`}
+            className=" flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center"
+            style={{ backgroundImage: `url(${image})` }}
+          ></div>
+        ))}
+      </Flickity>
+    );
+  } else {
+    return (
+      <div className={"bg-black flex justify-center "}>
+        <div className="text-white justify-center items-center flex mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center">
+          {/* No items to show */}
+        </div>
+      </div>
+    );
+  }
 }
