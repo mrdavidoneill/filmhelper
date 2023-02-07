@@ -42,7 +42,7 @@ describe("DiscoverPage", () => {
 
   it("handles search and sets items", async () => {
     global.localStorage = localStorageMock;
-    const { getByPlaceholderText, getByText } = render(<DiscoverPage />);
+    const { getByPlaceholderText } = render(<DiscoverPage />);
 
     const input = getByPlaceholderText("Search…");
     act(() => {
