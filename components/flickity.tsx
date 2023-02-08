@@ -50,7 +50,7 @@ export default function Carousel({
         options={flickityOptions}
         disableImagesLoaded={true} // default false
         reloadOnUpdate={true} // default false
-        static // default false
+        static={false} // default false
       >
         {images.map((image, index) => (
           <div
