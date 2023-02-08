@@ -5,8 +5,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./shared/**/*.{js,ts,jsx,tsx}",
   ],
+  important: "#__next",
   theme: {
     extend: {},
   },
   plugins: [],
+  corePlugins: {
+    preflight: false,
+  },
 };
