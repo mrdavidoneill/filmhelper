@@ -1,21 +1,66 @@
-import { FilmInfoType, FilmSearchResponseType } from "@/shared/types";
+import {
+  FilmInfoType,
+  FilmSearchResponseType,
+  FilmWatchListType,
+} from "@/shared/types";
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 export async function postAPIRequest({
   body,
   resource,
+  token,
 }: {
   body: Object;
   resource: string;
+  token?: string;
 }) {
-  const response = await fetch(`${API_BASE_URL}/${resource}/`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
-  return response.json();
+  const headers = {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  };
+
+  try {
+    const response = await fetch(`${API_BASE_URL}/${resource}/`, {
+      method: "POST",
+      headers: token
+        ? { ...headers, Authorization: `Token ${token}` }
+        : headers,
+      body: JSON.stringify(body),
+    });
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+    return response.json();
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+}
+
+export async function deleteAPIRequest({
+  token,
+  resource,
+}: {
+  token: string;
+  resource: string;
+}) {
+  try {
+    const response = await fetch(`${API_BASE_URL}/${resource}/`, {
+      method: "DELETE",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Token ${token}`,
+      },
+    });
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+    return response;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
 }
 
 export async function getAPIRequest({
@@ -25,14 +70,22 @@ export async function getAPIRequest({
   token: string;
   resource: string;
 }) {
-  const response = await fetch(`${API_BASE_URL}/${resource}/`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Token ${token}`,
-    },
-  });
-  return response.json();
+  try {
+    const response = await fetch(`${API_BASE_URL}/${resource}/`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Token ${token}`,
+      },
+    });
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+    return response.json();
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
 }
 
 export async function fetchToken(username: string, password: string) {
@@ -63,4 +116,31 @@ export async function getFilmInfo(imdbID: string): Promise<FilmInfoType> {
     `http://www.omdbapi.com/?i=${imdbID}&apikey=${process.env.NEXT_PUBLIC_OMDB_KEY}`
   );
   return response.json();
+}
+
+export async function postWatchList({
+  imdbID,
+  token,
+}: {
+  imdbID: string;
+  token: string;
+}): Promise<FilmWatchListType> {
+  return postAPIRequest({
+    body: { imdb_id: imdbID },
+    resource: "filmwatchlist",
+    token,
+  });
+}
+
+export async function deleteWatchList({
+  id,
+  token,
+}: {
+  id: number;
+  token: string;
+}) {
+  return deleteAPIRequest({
+    resource: `filmwatchlist/${id}`,
+    token,
+  });
 }
