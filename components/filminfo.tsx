@@ -7,14 +7,60 @@ import Typography from "@mui/material/Typography";
 import { FilmInfoType } from "@/shared/types";
 import { CardHeader } from "@mui/material";
 import RatingIcon from "@/components/ratingicon";
+import { deleteWatchList, postWatchList } from "@/shared/api";
+import { useSelector, useDispatch } from "react-redux";
+import watchListSlice, { selectWatchList } from "@/store/slices/watchListSlice";
 
 export default function FilmInfo({ film }: { film: FilmInfoType }) {
+  const state = useSelector(selectWatchList);
+  const dispatch = useDispatch();
+
+  async function handleAddToWatchList() {
+    try {
+      const token = localStorage.getItem("token");
+      if (token) {
+        const response = await postWatchList({ imdbID: film.imdbID, token });
+        dispatch(watchListSlice.actions.addToWatchList(response));
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function handleRemoveFromWatchList() {
+    try {
+      const token = localStorage.getItem("token");
+      if (token) {
+        await deleteWatchList({ id: state[film.imdbID].id, token });
+        dispatch(watchListSlice.actions.removeFromWatchList(film.imdbID));
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <Card className="h-full self-center w-full max-w-3xl overflow-y-auto">
       <CardActions>
-        <Button variant="outlined" className="self-center w-full" size="small">
-          Add to watchlist
-        </Button>
+        {film.imdbID in state ? (
+          <Button
+            variant="outlined"
+            className="self-center w-full"
+            size="small"
+            onClick={handleRemoveFromWatchList}
+          >
+            Remove from watchlist
+          </Button>
+        ) : (
+          <Button
+            variant="contained"
+            className="self-center w-full"
+            size="small"
+            onClick={handleAddToWatchList}
+          >
+            Add to watchlist
+          </Button>
+        )}
       </CardActions>
       <CardHeader
         className="pb-0"
