@@ -3,6 +3,7 @@ import "@testing-library/jest-dom";
 import React from "react";
 import { render, act, fireEvent } from "@testing-library/react";
 import WatchListPage from "@/pages/watchlist";
+import { renderWithProviders } from "@/shared/testUtils";
 
 jest.mock("next/router", () => ({
   useRouter: jest.fn().mockReturnValue({
@@ -27,7 +28,7 @@ const localStorageMock = {
 describe("WatchListPage", () => {
   it("renders without error", () => {
     global.localStorage = localStorageMock;
-    const { asFragment } = render(<WatchListPage />);
+    const { asFragment } = renderWithProviders(<WatchListPage />);
     expect(asFragment()).toMatchSnapshot();
   });
 
@@ -35,7 +36,7 @@ describe("WatchListPage", () => {
     global.localStorage = {
       getItem: jest.fn().mockReturnValue(null),
     };
-    const { getByText } = render(<WatchListPage />);
+    const { getByText } = renderWithProviders(<WatchListPage />);
     expect(getByText("Error: Not currently logged in")).toBeInTheDocument();
   });
 });

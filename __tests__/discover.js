@@ -8,6 +8,7 @@ import React from "react";
 import { render, act, fireEvent, waitFor } from "@testing-library/react";
 import { getFilmInfo, searchFilms } from "@/shared/api";
 import DiscoverPage from "@/pages/discover";
+import { renderWithProviders } from "@/shared/testUtils";
 
 jest.mock("next/router", () => ({
   useRouter: jest.fn().mockReturnValue({
@@ -36,13 +37,13 @@ const localStorageMock = {
 describe("DiscoverPage", () => {
   it("renders without error", () => {
     global.localStorage = localStorageMock;
-    const { asFragment } = render(<DiscoverPage />);
+    const { asFragment } = renderWithProviders(<DiscoverPage />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("handles search and sets items", async () => {
     global.localStorage = localStorageMock;
-    const { getByPlaceholderText } = render(<DiscoverPage />);
+    const { getByPlaceholderText } = renderWithProviders(<DiscoverPage />);
 
     const input = getByPlaceholderText("Search…");
     act(() => {
@@ -63,7 +64,9 @@ describe("DiscoverPage", () => {
 
   it("handles no search results", async () => {
     global.localStorage = localStorageMock;
-    const { getByPlaceholderText, getByText } = render(<DiscoverPage />);
+    const { getByPlaceholderText, getByText } = renderWithProviders(
+      <DiscoverPage />
+    );
 
     const input = getByPlaceholderText("Search…");
     act(() => {
