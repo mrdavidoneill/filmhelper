@@ -48,7 +48,7 @@ export interface FilmSearchType {
 }
 
 export interface FilmWatchListType {
-  url: string;
+  id: number;
   user: string;
   imdb_id: string;
   date_added: string;
