@@ -4,11 +4,17 @@ import SearchAppBar from "@/components/searchbar";
 import { ChangeEvent, Fragment, useEffect, useState } from "react";
 import Carousel from "@/components/carousel";
 import FilmInfo from "@/components/filminfo";
-import { FilmInfoType, FilmSearchType } from "@/shared/types";
+import {
+  FilmInfoType,
+  FilmSearchType,
+  FilmWatchListType,
+} from "@/shared/types";
 import { Alert, CircularProgress, ThemeProvider } from "@mui/material";
 import { theme } from "@/shared/theme";
 import BottomNavBar from "@/components/bottomnav";
-import { getFilmInfo, searchFilms } from "@/shared/api";
+import { getFilmInfo, getFilmWatchList, searchFilms } from "@/shared/api";
+import { useSelector, useDispatch } from "react-redux";
+import watchListSlice, { selectWatchList } from "@/store/slices/watchListSlice";
 
 const SAMPLE_FILMS = require("@/shared/api_examples/backup_movie.json");
 const SAMPLE_SEARCH_FILMS = require("@/shared/api_examples/movie_search.json");
@@ -16,6 +22,8 @@ const SAMPLE_SEARCH_FILMS = require("@/shared/api_examples/movie_search.json");
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const dispatch = useDispatch();
+
   const [randomIndex, setRandomIndex] = useState(0);
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,6 +34,38 @@ export default function Home() {
   const [error, setError] = useState("");
   const [dismissError, setDismissError] = useState(false);
   const [input, setInput] = useState("");
+
+  useEffect(() => {
+    async function getWatchList(token: string) {
+      setIsLoading(true);
+      const filmwatchlist: FilmWatchListType[] = await fetchFilmWatchList(
+        token
+      );
+      // Fetch all films in filmwatchlist
+      filmwatchlist.forEach(async (film, index) => {
+        dispatch(watchListSlice.actions.addToWatchList(film));
+      });
+      setIsLoading(false);
+    }
+    const token = localStorage.getItem("token");
+    if (token) {
+      getWatchList(token);
+    } else {
+      handleSetError("Not currently logged in");
+    }
+  }, []);
+
+  async function fetchFilmWatchList(
+    token: string
+  ): Promise<FilmWatchListType[]> {
+    try {
+      const response = await getFilmWatchList(token);
+      return response.results;
+    } catch (error) {
+      handleSetError(JSON.stringify(error));
+      return [];
+    }
+  }
 
   useEffect(() => {
     async function fetchData() {
