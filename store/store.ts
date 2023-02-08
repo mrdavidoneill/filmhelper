@@ -19,3 +19,4 @@ const makeStore = () =>
   });
 
 export const wrapper = createWrapper(makeStore);
+export type AppStore = ReturnType<typeof makeStore>;
