@@ -7,12 +7,20 @@ import Typography from "@mui/material/Typography";
 import { FilmInfoType } from "@/shared/types";
 import { CardHeader } from "@mui/material";
 import RatingIcon from "@/components/ratingicon";
-import { deleteWatchList, postWatchList } from "@/shared/api";
+import {
+  deleteRatings,
+  deleteWatchList,
+  postRatings,
+  postWatchList,
+  putRatings,
+} from "@/shared/api";
 import { useSelector, useDispatch } from "react-redux";
 import watchListSlice, { selectWatchList } from "@/store/slices/watchListSlice";
+import ratingsSlice, { selectRatings } from "@/store/slices/ratingsSlice";
 
 export default function FilmInfo({ film }: { film: FilmInfoType }) {
-  const state = useSelector(selectWatchList);
+  const watchListState = useSelector(selectWatchList);
+  const ratingsState = useSelector(selectRatings);
   const dispatch = useDispatch();
 
   async function handleAddToWatchList() {
@@ -31,7 +39,7 @@ export default function FilmInfo({ film }: { film: FilmInfoType }) {
     try {
       const token = localStorage.getItem("token");
       if (token) {
-        await deleteWatchList({ id: state[film.imdbID].id, token });
+        await deleteWatchList({ id: watchListState[film.imdbID].id, token });
         dispatch(watchListSlice.actions.removeFromWatchList(film.imdbID));
       }
     } catch (error) {
@@ -39,10 +47,63 @@ export default function FilmInfo({ film }: { film: FilmInfoType }) {
     }
   }
 
+  function handleRatingChange(value: number) {
+    if (film.imdbID in ratingsState) {
+      value ? putRatingChange(value) : deleteRating();
+    } else {
+      postRatingChange(value);
+    }
+  }
+
+  async function postRatingChange(value: number) {
+    try {
+      const token = localStorage.getItem("token");
+      if (token) {
+        const response = await postRatings({
+          rating: value,
+          imdbID: film.imdbID,
+          token,
+        });
+        dispatch(ratingsSlice.actions.addToRatings(response));
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function putRatingChange(value: number) {
+    try {
+      const token = localStorage.getItem("token");
+      if (token) {
+        const response = await putRatings({
+          id: ratingsState[film.imdbID].id,
+          rating: value,
+          imdbID: film.imdbID,
+          token,
+        });
+        dispatch(ratingsSlice.actions.addToRatings(response));
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function deleteRating() {
+    try {
+      const token = localStorage.getItem("token");
+      if (token) {
+        await deleteRatings({ id: ratingsState[film.imdbID].id, token });
+        dispatch(ratingsSlice.actions.removeFromRatings(film.imdbID));
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
-    <Card className="h-full self-center w-full max-w-3xl overflow-y-auto">
+    <Card className="h-full self-center w-full max-w-3xl overflow-y-auto animate-fadein">
       <CardActions>
-        {film.imdbID in state ? (
+        {film?.imdbID in watchListState ? (
           <Button
             variant="outlined"
             className="self-center w-full"
@@ -66,7 +127,12 @@ export default function FilmInfo({ film }: { film: FilmInfoType }) {
         className="pb-0"
         title={film?.Title}
         subheader={film?.Genre}
-        action={<RatingIcon stars={5} />}
+        action={
+          <RatingIcon
+            onChange={handleRatingChange}
+            percentage={ratingsState[film.imdbID]?.rating || 0}
+          />
+        }
       ></CardHeader>
 
       <CardContent className="pt-0">
