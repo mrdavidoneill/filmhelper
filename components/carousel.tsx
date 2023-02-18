@@ -12,7 +12,7 @@ const Flickity = dynamic(
 
 function Carousel({ images, setCurrentIndex, initialIndex }: CarouselProps) {
   return (
-    <div className="w-full">
+    <div className="w-full animate-fadeinslow">
       <Flickity
         setCurrentIndex={setCurrentIndex}
         images={images}
