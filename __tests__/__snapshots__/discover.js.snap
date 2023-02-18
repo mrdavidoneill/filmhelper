@@ -3,10 +3,10 @@
 exports[`DiscoverPage renders without error 1`] = `
 <DocumentFragment>
   <div
-    class="flex flex-col bg-slate-300 h-[100vh] overflow-hidden"
+    class="flex flex-col bg-slate-300 h-[100vh] overflow-hidden animate-fadein"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-4issou-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic animate-goright css-4issou-MuiPaper-root-MuiAppBar-root"
     >
       <div
         class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
@@ -70,19 +70,94 @@ exports[`DiscoverPage renders without error 1`] = `
       </div>
     </header>
     <div
-      class="w-full"
-    />
-    <div
-      class="flex flex-col flex-1 overflow-y-auto"
+      class="w-full animate-fadeinslow"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root h-full self-center w-full max-w-3xl overflow-y-auto css-bhp9pd-MuiPaper-root-MuiCard-root"
+        class="bg-black cursor-pointer outline-white flickity-enabled is-draggable"
+        tabindex="0"
+      >
+        <div
+          class="flickity-viewport"
+          style="height: 0px;"
+        >
+          <div
+            class="flickity-slider"
+            style="left: 0px; transform: translateX(NaN%);"
+          >
+            <div
+              class="flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center is-selected"
+              data-testid="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg"
+              style="background-image: url(https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg); position: absolute; left: 0px; transform: translateX(NaN%);"
+            />
+            <div
+              aria-hidden="true"
+              class=" flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center"
+              data-testid="https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+              style="background-image: url(https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg); position: absolute; left: 0px; transform: translateX(NaN%);"
+            />
+            <div
+              aria-hidden="true"
+              class=" flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center"
+              data-testid="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+              style="background-image: url(https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg); position: absolute; left: 0px; transform: translateX(NaN%);"
+            />
+            <div
+              aria-hidden="true"
+              class=" flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center"
+              data-testid="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg"
+              style="background-image: url(https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg); position: absolute; left: 0px; transform: translateX(NaN%);"
+            />
+            <div
+              aria-hidden="true"
+              class=" flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center"
+              data-testid="https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+              style="background-image: url(https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg); position: absolute; left: 0px; transform: translateX(NaN%);"
+            />
+            <div
+              aria-hidden="true"
+              class=" flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center"
+              data-testid="https://m.media-amazon.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg"
+              style="background-image: url(https://m.media-amazon.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg); position: absolute; left: 0px; transform: translateX(NaN%);"
+            />
+            <div
+              aria-hidden="true"
+              class=" flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center"
+              data-testid="https://m.media-amazon.com/images/M/MV5BMTAwMjU5OTgxNjZeQTJeQWpwZ15BbWU4MDUxNDYxODEx._V1_SX300.jpg"
+              style="background-image: url(https://m.media-amazon.com/images/M/MV5BMTAwMjU5OTgxNjZeQTJeQWpwZ15BbWU4MDUxNDYxODEx._V1_SX300.jpg); position: absolute; left: 0px; transform: translateX(NaN%);"
+            />
+            <div
+              aria-hidden="true"
+              class=" flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center"
+              data-testid="https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+              style="background-image: url(https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg); position: absolute; left: 0px; transform: translateX(NaN%);"
+            />
+            <div
+              aria-hidden="true"
+              class=" flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center"
+              data-testid="https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX300.jpg"
+              style="background-image: url(https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX300.jpg); position: absolute; left: 0px; transform: translateX(NaN%);"
+            />
+            <div
+              aria-hidden="true"
+              class=" flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center"
+              data-testid="https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_SX300.jpg"
+              style="background-image: url(https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_SX300.jpg); position: absolute; left: 0px; transform: translateX(NaN%);"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col flex-1 overflow-y-auto animate-risefast"
+    >
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root h-full self-center w-full max-w-3xl overflow-y-auto animate-fadein css-bhp9pd-MuiPaper-root-MuiCard-root"
       >
         <div
           class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall self-center w-full css-1n9bfs1-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall self-center w-full css-1a0mp58-MuiButtonBase-root-MuiButton-root"
             tabindex="0"
             type="button"
           >
@@ -123,21 +198,21 @@ exports[`DiscoverPage renders without error 1`] = `
                 >
                   <label
                     class="css-dqr9h-MuiRating-label"
-                    for=":r1:"
+                    for=":rc:"
                     style="width: 0%; overflow: hidden; position: absolute;"
                   >
                     <span
-                      class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                      class="MuiRating-icon MuiRating-iconEmpty css-1c99szj-MuiRating-icon"
                     >
                       <svg
                         aria-hidden="true"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
-                        data-testid="StarIcon"
+                        data-testid="StarBorderIcon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                          d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
                         />
                       </svg>
                     </span>
@@ -149,27 +224,27 @@ exports[`DiscoverPage renders without error 1`] = `
                   </label>
                   <input
                     class="MuiRating-visuallyHidden"
-                    id=":r1:"
+                    id=":rc:"
                     name="half-rating"
                     type="radio"
                     value="0.5"
                   />
                   <label
                     class="css-dqr9h-MuiRating-label"
-                    for=":r2:"
+                    for=":rd:"
                   >
                     <span
-                      class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                      class="MuiRating-icon MuiRating-iconEmpty css-1c99szj-MuiRating-icon"
                     >
                       <svg
                         aria-hidden="true"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
-                        data-testid="StarIcon"
+                        data-testid="StarBorderIcon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                          d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
                         />
                       </svg>
                     </span>
@@ -181,7 +256,7 @@ exports[`DiscoverPage renders without error 1`] = `
                   </label>
                   <input
                     class="MuiRating-visuallyHidden"
-                    id=":r2:"
+                    id=":rd:"
                     name="half-rating"
                     type="radio"
                     value="1"
@@ -192,21 +267,21 @@ exports[`DiscoverPage renders without error 1`] = `
                 >
                   <label
                     class="css-dqr9h-MuiRating-label"
-                    for=":r3:"
+                    for=":re:"
                     style="width: 0%; overflow: hidden; position: absolute;"
                   >
                     <span
-                      class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                      class="MuiRating-icon MuiRating-iconEmpty css-1c99szj-MuiRating-icon"
                     >
                       <svg
                         aria-hidden="true"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
-                        data-testid="StarIcon"
+                        data-testid="StarBorderIcon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                          d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
                         />
                       </svg>
                     </span>
@@ -218,27 +293,27 @@ exports[`DiscoverPage renders without error 1`] = `
                   </label>
                   <input
                     class="MuiRating-visuallyHidden"
-                    id=":r3:"
+                    id=":re:"
                     name="half-rating"
                     type="radio"
                     value="1.5"
                   />
                   <label
                     class="css-dqr9h-MuiRating-label"
-                    for=":r4:"
+                    for=":rf:"
                   >
                     <span
-                      class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                      class="MuiRating-icon MuiRating-iconEmpty css-1c99szj-MuiRating-icon"
                     >
                       <svg
                         aria-hidden="true"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
-                        data-testid="StarIcon"
+                        data-testid="StarBorderIcon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                          d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
                         />
                       </svg>
                     </span>
@@ -250,7 +325,7 @@ exports[`DiscoverPage renders without error 1`] = `
                   </label>
                   <input
                     class="MuiRating-visuallyHidden"
-                    id=":r4:"
+                    id=":rf:"
                     name="half-rating"
                     type="radio"
                     value="2"
@@ -261,21 +336,21 @@ exports[`DiscoverPage renders without error 1`] = `
                 >
                   <label
                     class="css-dqr9h-MuiRating-label"
-                    for=":r5:"
+                    for=":rg:"
                     style="width: 0%; overflow: hidden; position: absolute;"
                   >
                     <span
-                      class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                      class="MuiRating-icon MuiRating-iconEmpty css-1c99szj-MuiRating-icon"
                     >
                       <svg
                         aria-hidden="true"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
-                        data-testid="StarIcon"
+                        data-testid="StarBorderIcon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                          d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
                         />
                       </svg>
                     </span>
@@ -287,27 +362,27 @@ exports[`DiscoverPage renders without error 1`] = `
                   </label>
                   <input
                     class="MuiRating-visuallyHidden"
-                    id=":r5:"
+                    id=":rg:"
                     name="half-rating"
                     type="radio"
                     value="2.5"
                   />
                   <label
                     class="css-dqr9h-MuiRating-label"
-                    for=":r6:"
+                    for=":rh:"
                   >
                     <span
-                      class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                      class="MuiRating-icon MuiRating-iconEmpty css-1c99szj-MuiRating-icon"
                     >
                       <svg
                         aria-hidden="true"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
-                        data-testid="StarIcon"
+                        data-testid="StarBorderIcon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                          d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
                         />
                       </svg>
                     </span>
@@ -319,7 +394,7 @@ exports[`DiscoverPage renders without error 1`] = `
                   </label>
                   <input
                     class="MuiRating-visuallyHidden"
-                    id=":r6:"
+                    id=":rh:"
                     name="half-rating"
                     type="radio"
                     value="3"
@@ -330,21 +405,21 @@ exports[`DiscoverPage renders without error 1`] = `
                 >
                   <label
                     class="css-dqr9h-MuiRating-label"
-                    for=":r7:"
+                    for=":ri:"
                     style="width: 0%; overflow: hidden; position: absolute;"
                   >
                     <span
-                      class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                      class="MuiRating-icon MuiRating-iconEmpty css-1c99szj-MuiRating-icon"
                     >
                       <svg
                         aria-hidden="true"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
-                        data-testid="StarIcon"
+                        data-testid="StarBorderIcon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                          d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
                         />
                       </svg>
                     </span>
@@ -356,27 +431,27 @@ exports[`DiscoverPage renders without error 1`] = `
                   </label>
                   <input
                     class="MuiRating-visuallyHidden"
-                    id=":r7:"
+                    id=":ri:"
                     name="half-rating"
                     type="radio"
                     value="3.5"
                   />
                   <label
                     class="css-dqr9h-MuiRating-label"
-                    for=":r8:"
+                    for=":rj:"
                   >
                     <span
-                      class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                      class="MuiRating-icon MuiRating-iconEmpty css-1c99szj-MuiRating-icon"
                     >
                       <svg
                         aria-hidden="true"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
-                        data-testid="StarIcon"
+                        data-testid="StarBorderIcon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                          d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
                         />
                       </svg>
                     </span>
@@ -388,7 +463,7 @@ exports[`DiscoverPage renders without error 1`] = `
                   </label>
                   <input
                     class="MuiRating-visuallyHidden"
-                    id=":r8:"
+                    id=":rj:"
                     name="half-rating"
                     type="radio"
                     value="4"
@@ -399,21 +474,21 @@ exports[`DiscoverPage renders without error 1`] = `
                 >
                   <label
                     class="css-dqr9h-MuiRating-label"
-                    for=":r9:"
+                    for=":rk:"
                     style="width: 0%; overflow: hidden; position: absolute;"
                   >
                     <span
-                      class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                      class="MuiRating-icon MuiRating-iconEmpty css-1c99szj-MuiRating-icon"
                     >
                       <svg
                         aria-hidden="true"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
-                        data-testid="StarIcon"
+                        data-testid="StarBorderIcon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                          d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
                         />
                       </svg>
                     </span>
@@ -425,27 +500,27 @@ exports[`DiscoverPage renders without error 1`] = `
                   </label>
                   <input
                     class="MuiRating-visuallyHidden"
-                    id=":r9:"
+                    id=":rk:"
                     name="half-rating"
                     type="radio"
                     value="4.5"
                   />
                   <label
                     class="css-dqr9h-MuiRating-label"
-                    for=":ra:"
+                    for=":rl:"
                   >
                     <span
-                      class="MuiRating-icon MuiRating-iconFilled css-7qmtgc-MuiRating-icon"
+                      class="MuiRating-icon MuiRating-iconEmpty css-1c99szj-MuiRating-icon"
                     >
                       <svg
                         aria-hidden="true"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
-                        data-testid="StarIcon"
+                        data-testid="StarBorderIcon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                          d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
                         />
                       </svg>
                     </span>
@@ -456,9 +531,8 @@ exports[`DiscoverPage renders without error 1`] = `
                     </span>
                   </label>
                   <input
-                    checked=""
                     class="MuiRating-visuallyHidden"
-                    id=":ra:"
+                    id=":rl:"
                     name="half-rating"
                     type="radio"
                     value="5"
@@ -506,7 +580,7 @@ exports[`DiscoverPage renders without error 1`] = `
       </div>
     </div>
     <div
-      class="MuiBox-root css-0"
+      class="animate-rise MuiBox-root css-0"
     >
       <div
         class="MuiBottomNavigation-root w-full css-gumrph-MuiBottomNavigation-root"
@@ -563,7 +637,7 @@ exports[`DiscoverPage renders without error 1`] = `
         </a>
         <a
           class="MuiButtonBase-root MuiBottomNavigationAction-root css-11jxdpm-MuiButtonBase-root-MuiBottomNavigationAction-root"
-          href="rate"
+          href="ratings"
           tabindex="0"
         >
           <svg
