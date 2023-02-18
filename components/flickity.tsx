@@ -55,6 +55,7 @@ export default function Carousel({
         {images.map((image, index) => (
           <div
             key={`${image}:${index}`}
+            data-testid={image}
             className=" flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center"
             style={{ backgroundImage: `url(${image})` }}
           ></div>
