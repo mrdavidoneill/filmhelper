@@ -3,7 +3,34 @@
 exports[`Carousel should match the snapshot 1`] = `
 <div>
   <div
-    class="w-full"
-  />
+    class="w-full animate-fadeinslow"
+  >
+    <div
+      class="bg-black cursor-pointer outline-white flickity-enabled is-draggable"
+      tabindex="0"
+    >
+      <div
+        class="flickity-viewport"
+        style="height: 0px;"
+      >
+        <div
+          class="flickity-slider"
+          style="left: 0px; transform: translateX(NaN%);"
+        >
+          <div
+            class="flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center is-selected"
+            data-testid="image1.jpg"
+            style="background-image: url(image1.jpg); position: absolute; left: 0px; transform: translateX(NaN%);"
+          />
+          <div
+            aria-hidden="true"
+            class=" flex flex-grow mx-2 h-[35vh] w-[30vh] max-w-sm bg-cover bg-center"
+            data-testid="image2.jpg"
+            style="background-image: url(image2.jpg); position: absolute; left: 0px; transform: translateX(NaN%);"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
