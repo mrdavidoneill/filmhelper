@@ -3,7 +3,7 @@
 exports[`BottomNavBar component renders correctly for /discover path 1`] = `
 <DocumentFragment>
   <div
-    class="MuiBox-root css-0"
+    class="animate-rise MuiBox-root css-0"
   >
     <div
       class="MuiBottomNavigation-root w-full css-gumrph-MuiBottomNavigation-root"
@@ -60,7 +60,7 @@ exports[`BottomNavBar component renders correctly for /discover path 1`] = `
       </a>
       <a
         class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bjk3jo-MuiButtonBase-root-MuiBottomNavigationAction-root"
-        href="rate"
+        href="ratings"
         tabindex="0"
       >
         <svg
@@ -91,7 +91,7 @@ exports[`BottomNavBar component renders correctly for /discover path 1`] = `
 exports[`BottomNavBar component renders correctly for /ratings path 1`] = `
 <DocumentFragment>
   <div
-    class="MuiBox-root css-0"
+    class="animate-rise MuiBox-root css-0"
   >
     <div
       class="MuiBottomNavigation-root w-full css-gumrph-MuiBottomNavigation-root"
@@ -148,7 +148,7 @@ exports[`BottomNavBar component renders correctly for /ratings path 1`] = `
       </a>
       <a
         class="MuiButtonBase-root MuiBottomNavigationAction-root Mui-selected css-1bjk3jo-MuiButtonBase-root-MuiBottomNavigationAction-root"
-        href="rate"
+        href="ratings"
         tabindex="0"
       >
         <svg
@@ -179,7 +179,7 @@ exports[`BottomNavBar component renders correctly for /ratings path 1`] = `
 exports[`BottomNavBar component renders correctly for /watchlist path 1`] = `
 <DocumentFragment>
   <div
-    class="MuiBox-root css-0"
+    class="animate-rise MuiBox-root css-0"
   >
     <div
       class="MuiBottomNavigation-root w-full css-gumrph-MuiBottomNavigation-root"
@@ -236,7 +236,7 @@ exports[`BottomNavBar component renders correctly for /watchlist path 1`] = `
       </a>
       <a
         class="MuiButtonBase-root MuiBottomNavigationAction-root css-1bjk3jo-MuiButtonBase-root-MuiBottomNavigationAction-root"
-        href="rate"
+        href="ratings"
         tabindex="0"
       >
         <svg
