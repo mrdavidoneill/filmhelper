@@ -60,7 +60,7 @@ interface Props {
 
 export default function SearchAppBar({ value, onChange, onKeyDown }: Props) {
   return (
-    <AppBar position="static">
+    <AppBar position="static" className="animate-goright">
       <Toolbar>
         <IconButton
           size="large"
