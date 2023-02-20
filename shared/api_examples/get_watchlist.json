@@ -1,0 +1,25 @@
+{
+  "count": 3,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 27,
+      "user": 1,
+      "imdb_id": "tt2015381",
+      "date_added": "2023-02-08T23:51:14.495665Z"
+    },
+    {
+      "id": 26,
+      "user": 1,
+      "imdb_id": "tt0816692",
+      "date_added": "2023-02-08T23:51:12.387457Z"
+    },
+    {
+      "id": 12,
+      "user": 1,
+      "imdb_id": "tt0468569",
+      "date_added": "2023-02-08T12:37:02.299028Z"
+    }
+  ]
+}
