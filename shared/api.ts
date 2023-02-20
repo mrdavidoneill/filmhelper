@@ -1,5 +1,6 @@
 import {
   FilmInfoType,
+  FilmRatingsType,
   FilmSearchResponseType,
   FilmWatchListType,
 } from "@/shared/types";
@@ -33,6 +34,35 @@ export async function postAPIRequest({
     return response.json();
   } catch (error) {
     console.log(error);
+    throw error;
+  }
+}
+
+export async function updateAPIRequest({
+  body,
+  token,
+  resource,
+}: {
+  body: Object;
+  token: string;
+  resource: string;
+}) {
+  try {
+    const response = await fetch(`${API_BASE_URL}/${resource}/`, {
+      method: "PUT",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Token ${token}`,
+      },
+      body: JSON.stringify(body),
+    });
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+    return response.json();
+  } catch (error) {
+    console.error(error);
     throw error;
   }
 }
@@ -141,6 +171,60 @@ export async function deleteWatchList({
 }) {
   return deleteAPIRequest({
     resource: `filmwatchlist/${id}`,
+    token,
+  });
+}
+
+export async function getFilmRatings(token: string) {
+  return getAPIRequest({
+    token,
+    resource: "filmratings",
+  });
+}
+
+export async function postRatings({
+  rating,
+  imdbID,
+  token,
+}: {
+  rating: number;
+  imdbID: string;
+  token: string;
+}): Promise<FilmRatingsType> {
+  return postAPIRequest({
+    body: { rating, imdb_id: imdbID },
+    resource: "filmratings",
+    token,
+  });
+}
+
+export async function putRatings({
+  rating,
+  id,
+  imdbID,
+  token,
+}: {
+  rating: number;
+  imdbID: string;
+  id: number;
+  token: string;
+}): Promise<FilmRatingsType> {
+  return updateAPIRequest({
+    body: { rating, imdb_id: imdbID },
+    resource: `filmratings/${id}`,
+    token,
+  });
+}
+
+export async function deleteRatings({
+  id,
+  token,
+}: {
+  id: number;
+  token: string;
+}) {
+  return deleteAPIRequest({
+    resource: `filmratings/${id}`,
     token,
   });
 }
