@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  db:
+    image: mariadb:10.4
+    expose:
+      - 3306
+    env_file:
+      - .env
+    restart: "no"
+
+  web:
+    build: .
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py test"
+    ports:
+      - 8000:8000
+    volumes:
+      - ./:/usr/src/backend/
+    depends_on:
+      - db
+    restart: "no"
