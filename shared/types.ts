@@ -68,3 +68,11 @@ export interface FilmSearchResponseBadType {
 export type FilmSearchResponseType =
   | FilmSearchResponseGoodType
   | FilmSearchResponseBadType;
+
+export interface FilmRatingsType {
+  id: number;
+  rating: number;
+  user: string;
+  imdb_id: string;
+  date_added: string;
+}
