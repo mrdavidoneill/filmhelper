@@ -64,7 +64,7 @@ export default function WatchListPage() {
       const response = await getFilmWatchList(token);
       return response.results;
     } catch (error) {
-      handleSetError(JSON.stringify(error));
+      handleSetError("Couldn't reach server");
       return [];
     }
   }
@@ -118,7 +118,7 @@ export default function WatchListPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-col bg-slate-300 h-[100vh] overflow-hidden">
+      <div className="flex flex-col bg-slate-300 h-[100vh] overflow-hidden animate-fadein">
         {error && !dismissError && (
           <Alert severity="error" onClose={handleDismissError}>
             {`Error: ${error}`}
@@ -139,7 +139,7 @@ export default function WatchListPage() {
           images={filteredItems.map((film: { Poster: string }) => film.Poster)}
           initialIndex={currentIndex}
         />
-        <div className="flex flex-col flex-1 overflow-y-auto">
+        <div className="flex flex-col flex-1 overflow-y-auto animate-risefast">
           {filteredItems.length > 0 && (
             <FilmInfo film={filteredItems[currentIndex]} />
           )}
