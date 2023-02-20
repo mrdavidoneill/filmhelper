@@ -4,6 +4,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import type { PreloadedState } from "@reduxjs/toolkit";
 
+import ratingsSlice from "@/store/slices/ratingsSlice";
 import watchListSlice from "@/store/slices/watchListSlice";
 import { AppStore, RootState } from "@/store/store";
 
@@ -18,7 +19,10 @@ export function renderWithProviders(
     preloadedState = {} as RootState,
     // Automatically create a store instance if no store was passed in
     store = configureStore({
-      reducer: { watchList: watchListSlice.reducer },
+      reducer: {
+        watchList: watchListSlice.reducer,
+        ratings: ratingsSlice.reducer,
+      },
       preloadedState,
     }),
     ...renderOptions
