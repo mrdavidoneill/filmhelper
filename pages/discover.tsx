@@ -62,7 +62,7 @@ export default function Home() {
       const response = await getFilmWatchList(token);
       return response.results;
     } catch (error) {
-      handleSetError(JSON.stringify(error));
+      handleSetError("Couldn't reach server");
       return [];
     }
   }
@@ -144,7 +144,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-col bg-slate-300 h-[100vh] overflow-hidden">
+      <div className="flex flex-col bg-slate-300 h-[100vh] overflow-hidden animate-fadein">
         {error && !dismissError && (
           <Alert severity="error" onClose={handleDismissError}>
             {`Error: ${error}`}
@@ -168,8 +168,8 @@ export default function Home() {
                 .map((film: { Poster: string }) => film.Poster)}
               initialIndex={currentIndex}
             />
-            {(items[currentIndex] as FilmInfoType).Plot && (
-              <div className="flex flex-col flex-1 overflow-y-auto">
+            {(items[currentIndex] as FilmInfoType)?.Plot && (
+              <div className="flex flex-col flex-1 overflow-y-auto animate-risefast">
                 <FilmInfo film={items[currentIndex] as FilmInfoType} />
               </div>
             )}
